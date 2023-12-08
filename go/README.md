@@ -1,3 +1,5 @@
+create Go project
+
 ```bash
 go mod init mahiwa-example
 ```
@@ -23,6 +25,8 @@ func main() {
 
 ```
 
+setup dependency
+
 ```bash
 go mod tidy
 ```
@@ -40,7 +44,7 @@ create target.json (It will work without this file, but since WebAssembly reserv
 }
 ```
 
-creat wasm file(wasm file name can be anything)
+build WebAssembly file(wasm file name can be anything)
 
 ```bash
 tinygo build -target target.json -o main.wasm main.go
@@ -49,6 +53,6 @@ tinygo build -target target.json -o main.wasm main.go
 
 (optional) If you want to see the wat code
 
-```
+```bash
 wasm2wat main.wasm -o main.wat
 ```
